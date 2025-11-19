@@ -29,7 +29,7 @@ header, footer, .grid{
     display: grid;
    align-items: center;
 }
-.grid > main {
+main {
     grid-column: 2/3;
     margin: 1rem; /* annule toute largeur fixe héritée */
 }

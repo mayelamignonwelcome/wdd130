@@ -15,30 +15,67 @@ body {
     font-family: var(--body-font);
     color: var(--accent1-color);
 }
-header, main, footer {
-    width: 500px;
+header {
+    width: 840px;
     margin: 0 auto;
-}
-header, footer, .grid{
-    max-width: 840px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    box-sizing: border-box;
-}
-.grid {
     display: grid;
-   align-items: center;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    background-color: var(--accent1-color);
+    border-bottom: 3px solid var(--secondary-color);
 }
-main {
-    grid-column: 2/3;
-    margin: 1rem; /* annule toute largeur fixe héritée */
+header img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    
 }
- aside {
-   width: 20rem;
-   position: relative;
-   grid-column: 1/2;
-   grid-row: 1/2; /* annule toute largeur fixe héritée */
+nav {
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
 }
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    list-style: none;
+    gap: 1rem;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+}
+header, main, footer {
+    width: 840px;
+    margin: 0 auto;
+}
+footer {
+    padding: 1rem;
+    border-top: 3px solid var(--secondary-color);
+    text-align: center;
+}
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    list-style: none;
+}
+
 .hero {
     position: relative;
 }
@@ -50,17 +87,19 @@ main {
 .hero h1{
     position: absolute;
     top: 20px;
-  left: 1px;
-  color: white;
-  font-size: 2rem;
+   left: 1px;
+   color: white;
+   font-size: 2rem;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 .hero article {
   position: absolute;   /* Placé par-dessus l'image */
   bottom: 20px;
   right: 20px;
   background-color: rgba(232, 233, 238, 0.6 );
-  color: #fff;
-  padding: 1px;
+  color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 4px;
   
 }
 
@@ -79,12 +118,51 @@ h1 {
 p {
   color: var(--accent1-color);
   font-family: var(--body-font);
+  margin: 1rem;
+  padding: 0.5rem;
+}
+section, article {
+    margin: 1rem;
+    padding: 0.5rem;
+}
+section, h2{
+    text-align: center;
+    background-color: var(--accent1-color);
+}
+.adventures {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 colonnes égales */
+  gap: 20px;
+  background-color: var(--accent1-color);               /* fond vert pour toute la section */
+  padding: 20px;
+}
+
+.adventures figure {
+  text-align: center;
+  background-color: transparent; 
+}
+.adventures img {
+  width: 100px;
+  height: 100px;
+  border: 3px solid white;               /* contraste sur fond vert */
+  border-radius: 8px;
+}
+.adventures figcaption {
+  color: white;                          /* texte lisible sur fond vert */
+  margin-top: 8px;
 }
 button {
   background-color: var(--secondary-color); /* utilisation */
   color: var(--accent2-color);              /* utilisation */
   padding: 10px;
   border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+}
+button:hover {
+    background-color: var(--accent1-color);
+    color: white;
 }
 .hero article img {
     float: right;
@@ -97,6 +175,10 @@ h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
+ p{
+    color: #fff;
+    text-decoration: floralwhite;
+}
 nav {
     background-color: steelblue;
     padding: 1rem;
@@ -105,9 +187,35 @@ nav {
     align-items: center;
 }
 nav, p, section, article {
-    margin: 1px;
-    padding: 4px;
+    margin: 16px;
+    padding: 8px;
 }
-.socialmedia a{
+.socialmedia a {
     text-decoration: none;
+    margin: 0 0.5rem;
+}
+.socialmedia img {
+    width: 40px;
+    height: auto;
+}
+footer {
+  background-color:var(--accent1-color);       /* couleur de fond du footer */
+  color: white;                 /* couleur du texte */
+  display: flex;                /* active Flexbox */
+  justify-content: space-between; /* espace entre le texte et les icônes */
+  align-items: center;          /* aligne verticalement */
+  padding: 15px 30px;
+}
+footer p {
+  margin: 0;                    /* enlève la marge par défaut */
+}
+footer .socialmedia {
+  display: flex;                /* aligne les icônes sur une ligne */
+  gap: 15px;                    /* espace entre les icônes */
+}
+footer .socialmedia img {
+  width: 30px;                  /* taille des icônes */
+  height: auto;
+  display: flex;
+  justify-content: space-around;
 }

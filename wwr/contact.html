@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 130 | Rafting Site - Contact Us</title>
+  <meta name="description" content="Get in touch with Rapids Rafting Company. Contact us for reservations, questions, or more information about our rafting trips.">
+  <meta name="author" content="Mignon welcome MAYELA">
+  <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+
+
+<body>
+    <header>
+      <img src="images/image.png" alt="Logos: Rafting site" width="100">
+      <nav>
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+    <h1>Contact Us</h1>
+
+    <h2>Send Us a Message</h2>
+
+    <p>White Water Rafting</p>
+    <p>Phone: 064243026</p>
+    <p>Email: <a href="mailto:info@rapidsrafting.com">info@rapidsrafting.com</a></p>
+
+    <!-- Carte Google Maps -->
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.995237908152!2d15.2538192!3d-4.22118879999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6bcd0026bc5b95%3A0x74a29d12d37acf2b!2sCit%C3%A9%20des%2017!5e0!3m2!1sfr!2scg!4v1764298866287!5m2!1sfr!2scg" 
+            width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <!-- Profils employés -->
+    <section class="employees">
+        <h2>Meet Our Team</h2>
+        <figure>
+            <img src="images/Céline_Dion_2012.jpg" alt="Photo of John Doe, Manager" width="100" height="100">
+            <figcaption>John Doe – General Manager</figcaption>
+        </figure>
+        <figure>
+            <img src="images/David-Bowie_Chicago.jpg" alt="Photo of Sarah Smith, Guide" width="100" height="100">
+            <figcaption>Sarah Smith – Lead Rafting Guide</figcaption>
+        </figure>
+        <figure>
+            <img src="images/James_Gleason_in_Meet_John_Doe_trailer.jpg" alt="Photo of Alex Brown, Customer Service" width="150" height="100">
+            <figcaption>Alex Brown – Customer Service Specialist</figcaption>
+        </figure>
+    </section>
+
+    <!-- Formulaire de contact -->
+    <section class="contact-form">
+        <h2>Contact Form</h2>
+        <form>
+            <!-- Nom -->
+            <div class="form-item">
+                <label for="username">Your Name:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-item">
+                <label for="useremail">Your Email:</label>
+                <input type="email" id="useremail" name="useremail" required>
+            </div>
+
+            <!-- Purpose (radio buttons) -->
+            <fieldset class="form-item">
+                <legend>Purpose of Message:</legend>
+                <label><input type="radio" name="purpose" value="general" required> General Inquiry</label><br>
+                <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label><br>
+                <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+            </fieldset>
+
+            <!-- Message -->
+            <div class="form-item">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="form-item">
+                <label>
+                    <input type="checkbox" name="newsletter"> Please subscribe me to the monthly newsletter
+                </label>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-item">
+                <button type="submit">Send Message</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+    <footer>
+        <p>&copy;2025 &#10070; Rapids &#10070; Mignon welcome MAYELA</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_facebook-128.png" alt="Facebook Icon">
+            </a>
+             <a href="https://linkedin.com">
+                <img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-128.png" alt="Linkedin Icon">
+            </a>
+             <a href="https://instagram.com">
+                <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/instagram_icon-instagram_buttoninstegram-128.png" alt="Instagram Icon">
+            </a>
+        </nav>
+    </footer>
+</body>
+</html>

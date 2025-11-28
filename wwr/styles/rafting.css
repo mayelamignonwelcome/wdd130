@@ -1,256 +1,201 @@
 :root {
-    --primary-color: #055a05;
-    --secondary-color: #f4a261;
-    --accent1-color: #264653;
-    --accent2-color: #e9c46a;
-    --heading-font: "Times New Roman", "Georgia", serif;
-    --body-font: Arial, Helvetica, sans-serif;
-}
-:root {
-  --primary-color: #004080;
-  --secondary-color: #ffcc00;
-  --accent1-color: #0066cc;
-  --accent2-color: #ff6600;
-}
-*,
-*::before,
-*::after{
-    margin: 1;
-    padding: 0;
-    box-sizing: border-box;
-}
- header {
-  display: grid;
-  grid-template-columns: 120px 1fr; /* logo à gauche, nav prend le reste */
-  align-items: center;              /* centre verticalement */
-  background-color: var(--accent1-color);
-  padding: 1rem 2rem;
-  border-bottom: 3px solid var(--secondary-color);
+  --primary-color: #055a05;
+  --secondary-color: #264653;
+  --accent1-color: #264653;
+  --accent2-color: #e9c46a;
+  --heading-font: "Times New Roman", "Georgia", "serif";
+  --body-font: Arial, Helvetica, sans-serif,
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: var(--body-font);
+  color:var(--accent1-color);
+}
+
+header {
+  display: grid;                       /* Active CSS Grid */
+  grid-template-columns: 120px 1fr;    /* Colonne 1 = logo, colonne 2 = nav */
+  align-items: center;                 /* Centre verticalement */
+  max-width: 840px;                    /* Largeur max */
+  margin: 0 auto;                      /* Centre le header */
+  padding: 15px 20px;                  /* Espacement interne */
+  background-color: #0d3b66;           /* Couleur de fond (bleu profond rafting) */
+  color: #fff;                        /* Espacement interne */
+}
 header img {
-  width: 100px;
+  width: 100px;                        /* Taille fixe du logo */
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  justify-self: start;
+   
+}
+header nav ul {
+  display: flex;                       /* Les liens en ligne */
+  justify-content: flex-end;           /* Alignés à droite */
+  gap: 15px;                           /* Espacement entre les liens */
+  list-style: none;           /* Supprime les puces */
+  margin: 0;                  /* Supprime marges par défaut */
+  padding: 0;                    /* Supprime les puces */
 }
 
- body {
-    font-family: var(--body-font);
-    color: var(--accent1-color);
- }
+header nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+header nav a:hover {
+  color: #c49f19;                   /* Jaune doré au survol */
+}
+header, main, footer {
+  width: 840px;
+  height: auto;
+}
 
- header, main, footer{
-    width: 840px;
-    margin: 0 auto;
- }
+h1, h2 {
+  font-family:var(--heading-font);
+  color: var(--primary-color);
+}
 
- h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color)
- }
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+.socialmedia a {
+  text-decoration: none;
+}
 
- nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
- }
- .socialmedia a {
-    text-decoration: none;
- }
+.hero {
+  position: relative;
+}
 
- .hero {
-    position: relative;
- }
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
- .hero h1 {
+h1 {
   position: absolute;
   top: 20px;
-  left: 20px;
-  color: white;
-  background-color: rgba(0,0,0,0.5);
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-}
- .hero img {
-    display: block;
-    width: 100%;
-    height: auto;
- }
-
- h1 {
-    position:absolute;
-    top: 0.2px;;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.7;
-    color: #fff;
- }
- .hero {
-  position: relative; /* nécessaire pour que l'article se place par rapport à ce conteneur */
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.7;
+  background-color: var(--accent1-color);
+  color: #fff;
+ 
 }
 
 .hero article {
   position: absolute;
-  bottom: 20px;       /* distance depuis le bas */
-  right: 20px;        /* distance depuis la droite */
-  background-color: rgba(255, 255, 255, 0.8); /* fond semi-transparent */
-  padding: 1rem;
+  top: 300px;
+  left: 350px;
+  width: 250px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #333;
+  border-radius: 1px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+  display: grid;
+
+  
+}
+
+.hero article img {
+  float: right;
+  width: 125px;
+  margin: 0 0 10px 15px;
+  border: 2px solid #333;
   border-radius: 8px;
-  width: 300px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* ombre pour le style */
-}
-.hero article img{
-    float: right;
-    width: 125px;
-    margin-left: 1rem;
-   border-radius: 6px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+
 }
 
-
-
-nav ul {
-  display: flex;        /* active flexbox */
-  justify-content: flex-end; /* aligne les liens à droite */
-  gap: 2rem;            /* espace entre les liens */
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.history-layout {
+  display: grid;                      /* Active CSS Grid */
+  grid-template-columns: 250px 1fr;   /* Colonne image + colonne texte */
+  gap: 20px;                          /* Espacement entre image et texte */
+  align-items: center;                /* Aligne verticalement */
+  margin-top: 15px;
 }
 
-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-  background-color: var(--accent1-color);
-}
-nav a:hover {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
+.history img {
+  border-radius: 8px;                 /* Coins arrondis */
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.3); /* Ombre portée */
+  
 }
 
-.history {
-  margin: 2rem 0;
-  text-align: center;
-}
-
-.history-content {
-  display: grid;
-  grid-template-columns: 1fr 2fr; /* image à gauche, texte à droite */
-  gap: 2rem;
-  align-items: center;
-}
-
-.history-content img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-.adventure-gallery {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 colonnes égales */
-  gap: 1rem;
-  margin-top: 1rem;
-}
-.adventure-gallery figure {
-  text-align: center;
-}
-.adventure-gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.adventure-gallery figcaption {
-  margin-top: 0.5rem;
-  font-weight: bold;
-  color: var(--accent2-color);
-}
-p {
-  display: grid;
-  grid-template-columns: space-evently;
-  margin: 1rem;
-  padding: 1rem;
+.history-layout {
+  display: flex;          /* Active Flexbox */
+  gap: 20px;              /* Espacement entre image et texte */
+  align-items: center;    /* Centre verticalement */
  
 }
-footer {
-  background-color: var(--accent1-color); /* couleur de fond */
-  color: white;                           /* couleur du texte */
-  display: flex;                          /* active Flexbox */
-  justify-content: space-between;         /* texte à gauche, icônes à droite */
-  align-items: center;                    /* alignement vertical */
-  padding: 1rem 2rem;
-  border-top: 3px solid var(--secondary-color);
-}
 
-footer p {
-  margin: 1;                    /* enlève la marge par défaut */
-}
-.socialmedia a {
-  text-decoration: none; /* enlève le soulignement */
-  display: inline-block;
-}
-footer .socialmedia {
-  display: flex;      /* aligne les icônes sur une ligne */
-  gap: 1rem;          /* espace entre les icônes */
-}
-footer .socialmedia img {
-  width: 30px;                  /* taille des icônes */
-  height: auto;
-  display: flex;
-  justify-content: space-around;
-}
-footer .socialmedia img:hover {
-  transform: scale(1.2); /* effet zoom au survol */
-}
-
-.employees {
-  display: flex;
-  justify-content: space-around;
-  margin: 2rem 0;
-}
-.employees figure {
-  text-align: center;
-}
-.employees img {
+.history img {
+  width: 250px;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+
 }
 
-.contact-form {
-  margin: 2rem 0;
-}
-.form-item {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  align-items: center;
-  margin: 1rem 0;
-}
-button {
-  background-color: navy;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1.1rem;
-}
-button:hover {
-  background-color: darkgreen;
+.adventures {
+  display: flex;              /* Active Flexbox */
+  justify-content: space-between; /* Répartit les figures sur toute la largeur */
+  align-items: center;        /* Centre verticalement */
+  gap: 15px;                  /* Espacement entre les figures */
+  margin: 20px 0;
 }
 
-.socialmedia img {
-  width: 30px;
-  height: auto;
-  margin-left: 0.5rem;
+.adventures figure {
+  text-align: center;         /* Centre image + légende */
+  flex: 1;                    /* Chaque figure prend une part égale */
+  background-color: var(--accent1-color);
+}
+
+.adventures img {
+  width: 100%;                /* Image occupe la largeur dispo */
+  max-width: 150px;           /* Taille max pour garder cohérence */
+  border-radius: 8px;         /* Coins arrondis */
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3); /* Ombre portée */
+  
+}
+
+.adventures figcaption {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #d92e53;             /* Couleur cohérente avec ton thème rafting */
+  
+}
+
+footer {
+  display: flex;                  /* Active Flexbox */
+  justify-content: space-between; /* Texte à gauche, icônes à droite */
+  align-items: center;            /* Centre verticalement */
+  max-width: 840px;               /* Largeur max cohérente avec header/grid */
+  margin: 0 auto;                 /* Centre le footer */
+  padding: 1px 2px;
+  background-color: #0d3b66;      /* Même couleur que le header */
+  color: #fff;
+}
+
+footer .social {
+  display: flex;                  /* Icônes en ligne */
+  gap: 15px;                      /* Espacement entre les icônes */
+}
+
+footer .social img {
+  width: 30px;                    /* Taille uniforme des icônes */
+  height: 30px;
+  border-radius: 50%;             /* Icônes arrondies */
   transition: transform 0.3s ease;
 }
 
-.socialmedia img:hover {
-  transform: scale(1.2);
+footer .social img:hover {
+  transform: scale(1.1);          /* Zoom léger au survol */
 }

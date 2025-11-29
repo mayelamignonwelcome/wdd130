@@ -1,10 +1,13 @@
 :root {
   --primary-color: #055a05;
-  --secondary-color: #264653;
+  --secondary-color: #f4a261;
   --accent1-color: #264653;
   --accent2-color: #e9c46a;
+  --text-dark: #003300;
+  --text-light: #000;
+  --text-white: #fff;
   --heading-font: "Times New Roman", "Georgia", "serif";
-  --body-font: Arial, Helvetica, sans-serif,
+  --body-font: Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -15,56 +18,65 @@
 
 body {
   font-family: var(--body-font);
-  color:var(--accent1-color);
+  color: var(--text-dark);
+  background-color: var(--secondary-color);
+   
 }
 
 header {
+  background-color: var(--primary-color);
   display: grid;                       /* Active CSS Grid */
-  grid-template-columns: 120px 1fr;    /* Colonne 1 = logo, colonne 2 = nav */
+  grid-template-columns: auto 1fr;    /* Colonne 1 = logo, colonne 2 = nav */
   align-items: center;                 /* Centre verticalement */
   max-width: 840px;                    /* Largeur max */
   margin: 0 auto;                      /* Centre le header */
-  padding: 15px 20px;                  /* Espacement interne */
-  background-color: #0d3b66;           /* Couleur de fond (bleu profond rafting) */
-  color: #fff;                        /* Espacement interne */
+  padding: 1rem;                  /* Espacement interne */
+  color: var(--accent2-color);                      /* Espacement interne */
 }
 header img {
-  width: 100px;                        /* Taille fixe du logo */
-  height: auto;
-  justify-self: start;
+  max-height: 60px;
    
 }
-header nav ul {
+ nav {
   display: flex;                       /* Les liens en ligne */
-  justify-content: flex-end;           /* Alignés à droite */
-  gap: 15px;                           /* Espacement entre les liens */
-  list-style: none;           /* Supprime les puces */
-  margin: 0;                  /* Supprime marges par défaut */
-  padding: 0;                    /* Supprime les puces */
+  justify-content: space-evenly;           /* Alignés à droite */
+  align-items: center;
 }
 
-header nav a {
+ nav a {
+  display: block;
+  padding: 0.5rem 1rem;
   text-decoration: none;
-  font-weight: bold;
-  color: var(--secondary-color);
-  transition: color 0.3s ease;
+  font-weight: 700;
+  color: var(--text-light);
+  background-color: var(--secondary-color);
+  border-radius:4px ;
 }
 header nav a:hover {
-  color: #c49f19;                   /* Jaune doré au survol */
+  color: var(--accent1-color);                  /* Jaune doré au survol */
 }
 header, main, footer {
   width: 840px;
-  height: auto;
+  height: 0 auto;
 }
 
 h1, h2 {
   font-family:var(--heading-font);
-  color: var(--primary-color);
+  color: var(--text-dark);
 }
-
-nav, p, section, article {
+h2, p{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  left: 330px;
+}
+nav, p, article {
   margin: 16px;
   padding: 8px;
+}
+
+main {
+  padding: 1rem;
 }
 .socialmedia a {
   text-decoration: none;
@@ -72,6 +84,12 @@ nav, p, section, article {
 
 .hero {
   position: relative;
+  max-width: 840px;
+  margin: 0 auto;
+  display: grid;                       /* Active CSS Grid */
+  grid-template-columns: auto 1fr;    /* Colonne 1 = logo, colonne 2 = nav */
+  align-items: center;  
+  
 }
 
 .hero img {
@@ -79,123 +97,234 @@ nav, p, section, article {
   width: 100%;
   height: auto;
 }
+div .hero {
+  display: flex;
+  justify-content: center;
+  left: 330px;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-h1 {
+.hero h1 {
   position: absolute;
   top: 20px;
+  left: 1px;
   width: 100%;
-  padding: 16px;
+  padding: 0.5rem 1rem;
   text-align: center;
   opacity: 0.7;
   background-color: var(--accent1-color);
-  color: #fff;
+  border-radius: 4px;
+  color: var(--text-white)
  
 }
 
 .hero article {
   position: absolute;
-  top: 300px;
-  left: 350px;
-  width: 250px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 2px solid #333;
-  border-radius: 1px;
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
-  display: grid;
-
-  
+  bottom: 2px;
+  left: 40px;
+  color: var(--text-white);
+  background-color: var(--accent1-color);
+  padding: 2px;
+  max-width: 60;
+  border-radius: 4px;
+  margin: auto 0;
 }
 
 .hero article img {
   float: right;
   width: 125px;
-  margin: 0 0 10px 15px;
-  border: 2px solid #333;
-  border-radius: 8px;
-  box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
-
+}
+.hero article {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  color: var(--text-white);
+  background-color: var(--accent1-color);
+  padding: 10px;
+  max-width: 60;
+  border-radius: 4px;
+}
+.history{
+  max-width: 840px;
+  margin: 2rem auto;
+  line-height: 1.6;
 }
 
-.history-layout {
-  display: grid;                      /* Active CSS Grid */
-  grid-template-columns: 250px 1fr;   /* Colonne image + colonne texte */
-  gap: 20px;                          /* Espacement entre image et texte */
-  align-items: center;                /* Aligne verticalement */
-  margin-top: 15px;
-}
 
-.history img {
-  border-radius: 8px;                 /* Coins arrondis */
-  box-shadow: 3px 3px 10px rgba(0,0,0,0.3); /* Ombre portée */
-  
-}
 
 .history-layout {
   display: flex;          /* Active Flexbox */
   gap: 20px;              /* Espacement entre image et texte */
   align-items: center;    /* Centre verticalement */
- 
-}
-
-.history img {
-  width: 250px;
-  border-radius: 8px;
-
 }
 
 .adventures {
   display: flex;              /* Active Flexbox */
   justify-content: space-between; /* Répartit les figures sur toute la largeur */
-  align-items: center;        /* Centre verticalement */
-  gap: 15px;                  /* Espacement entre les figures */
-  margin: 20px 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 840px;
+  margin: 2rem auto;
+  
 }
 
 .adventures figure {
   text-align: center;         /* Centre image + légende */
-  flex: 1;                    /* Chaque figure prend une part égale */
-  background-color: var(--accent1-color);
+  flex: 1 1 1px;                   /* Chaque figure prend une part égale */
 }
 
 .adventures img {
-  width: 100%;                /* Image occupe la largeur dispo */
-  max-width: 150px;           /* Taille max pour garder cohérence */
-  border-radius: 8px;         /* Coins arrondis */
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.3); /* Ombre portée */
-  
+  width: 100%;             /* Image occupe la largeur dispo */
+  border-radius: 6px;
 }
 
-.adventures figcaption {
-  margin-top: 8px;
-  font-weight: bold;
-  color: #d92e53;             /* Couleur cohérente avec ton thème rafting */
-  
-}
 
 footer {
-  display: flex;                  /* Active Flexbox */
-  justify-content: space-between; /* Texte à gauche, icônes à droite */
-  align-items: center;            /* Centre verticalement */
-  max-width: 840px;               /* Largeur max cohérente avec header/grid */
-  margin: 0 auto;                 /* Centre le footer */
-  padding: 1px 2px;
-  background-color: #0d3b66;      /* Même couleur que le header */
-  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--accent1-color);
+  color: var(--text-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 840px;
+  margin: 0 auto;
 }
 
 footer .social {
   display: flex;                  /* Icônes en ligne */
-  gap: 15px;                      /* Espacement entre les icônes */
+  gap: 1rem;                      /* Espacement entre les icônes */
 }
 
 footer .social img {
   width: 30px;                    /* Taille uniforme des icônes */
   height: 30px;
-  border-radius: 50%;             /* Icônes arrondies */
-  transition: transform 0.3s ease;
 }
 
-footer .social img:hover {
-  transform: scale(1.1);          /* Zoom léger au survol */
+nav a:hover{
+  color: var(--accent1-color);
 }
+.socialmedia a {
+  text-decoration: none;
+  color: var(--text-white);
+  padding: 0.5rem;
+  font-weight: 700;
+  margin: 0 8px;
+}
+.socialmedia img{
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  transition: transform 0.3s;
+}
+.socialmedia img:hover{
+  transform: scale(1.2);
+}
+.contact-info {
+  margin: 20px auto;
+  max-width: 800px;
+  display: grid;
+  justify-content: center;
+}
+.contact-info h2, p{
+  display: grid;
+  justify-content: left;
+  align-items: flex-start;
+  left: 840px;
+}
+.contact-info h2,
+.contact-info p {
+  text-align: left;       /* aligne le texte à gauche */
+  margin-left: 0;         /* supprime tout décalage */
+  justify-content: flex-start; /* utile si tu utilises flex ou grid */
+  align-items: flex-start;     /* idem */
+}
+.contact-info h2,
+.contact-info p {
+  text-align: left;
+}
+.map-container iframe{
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+.map iframe {
+  border: 0;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.map iframe {
+  border: 0;
+  width: 100%;       /* largeur fixe */
+  max-width: 100%;    /* reste responsive */
+  height: auto;
+  display: block;
+  margin-left: 0;     /* colle à gauche */
+}
+.team.profiles {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.team img {
+  width: 20%;
+  border-radius: 8px;
+  border: 2px solid var(--accent1-color);
+}
+.contact-form form{
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: var(--text-white);
+  border: 1px solid var(--accent1-color);
+  border-radius: 6px;
+}
+.contact-form {
+  margin: 20px 0;     /* marge en haut et en bas uniquement */
+  text-align: left;   /* contenu textuel aligné à gauche */
+}
+.contact-form form {
+  max-width: 600px;
+  margin: 20px 0;   /* marge en haut et en bas, aligné à gauche */
+  padding: 15px;
+  background-color: var(--text-white);
+  border: 1px solid var(--accent1-color);
+  border-radius: 6px;
+}
+.contact-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--text-dark);
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid var(--accent1-color);
+  border-radius: 4px;
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  border: none;
+  padding: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent1-color);
+}
+button {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+}
+

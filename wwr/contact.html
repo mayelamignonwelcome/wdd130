@@ -13,64 +13,76 @@
 
 <body>
      <header>
-        <img src="images/image.png" alt="Logos: Rafting site Logo">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-     </header>
+      <img src="images/image.png" alt="Logos: Rafting site" width="100">
+      <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="trips.html">Trips</a>
+          <a href="contact.html">Contact Us</a>
+      </nav>
+    </header>
 
      <main>
-             <h1>Contact Us</h1>
+             <h1>White Water Rafting Company</h1>
 
                 <section id="contact-info" class="contact-info">
                         <h2>Contact Information</h2>
 
-            <p>White Water Rafting</p>
-            <p><strong>Address:</strong> 95 Street Joseph Kiessila, Neighborhood Cité des 17</p>
-            <p><strong>Phone:</strong> (999) 999-999</p>
-            <p><strong>Email:</strong> <a href="mailto:info@wwrafting.com">info@wwrafting.com</a></p>
-            <div class="map">
-             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.99523790817!2d15.2538192!3d-4.22118879999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6bcd0026bc5b95%3A0x74a29d12d37acf2b!2sCit%C3%A9%20des%2017!5e0!3m2!1sfr!2scg!4v1764443233079!5m2!1sfr!2scg" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="company-contact">
+                <p>123 Main River Street</p>
+                <p>Kolob, California</p>
+                <p><strong>Phone:</strong> +1 999 999 9999</p>
+                <p><strong>Email:</strong> <a href="mailto:info@whitewater.com">info@whitewater.com</a></p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="map">
+                 <iframe title="Rapids Rafting location map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.99523790817!2d15.2538192!3d-4.22118879999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6bcd0026bc5b95%3A0x74a29d12d37acf2b!2sCit%C3%A9%20des%2017!5e0!3m2!1sfr!2scg!4v1764443233079!5m2!1sfr!2scg" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form>
+                                                <div class="form-row">
+                                                    <div class="form-field">
+                                                        <label for="name">Name:</label>
+                                                        <input type="text" id="name" name="name" required>
+                                                    </div>
+                                                    <div class="form-field">
+                                                        <label for="email">Email:</label>
+                                                        <input type="email" id="email" name="email" required>
+                                                    </div>
+                                                </div>
+
+                        <fieldset>
+                            <legend>Purpose of Message</legend>
+                            <label for="general">
+                                <input type="radio" id="general" name="purpose" value="general"> General Inquiry
+                            </label>
+                            <label for="reservation">
+                                <input type="radio" id="reservation" name="purpose" value="reservation"> Reservation Question
+                            </label>
+                            <label for="suggestion">
+                                <input type="radio" id="suggestion" name="purpose" value="suggestion"> Website Suggestion
+                            </label>
+                        </fieldset>
+
+                        <div class="form-group">
+                          <label for="message">Message:</label>
+                          <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <label for="newsletter">
+                            <input type="checkbox" id="newsletter" name="newsletter"> Please subscribe me to the monthly newsletter
+                        </label>
+
+                        <button type="submit" class="btn-primary">Get in Touch!</button>
+                    </form>
+                </div>
             </div>
         </section>
-
-     <section id="contact-form" class="contact-form">
-         <h2>Send Us a Message</h2>
-       <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <fieldset>
-            <legend>Purpose of Message</legend>
-            <label for="general">
-                <input type="radio" id="general" name="purpose" value="general"> General Inquiry
-            </label>
-            <label for="reservation">
-                <input type="radio" id="reservation" name="purpose" value="reservation"> Reservation Question
-            </label>
-            <label for="suggestion">
-                <input type="radio" id="suggestion" name="purpose" value="suggestion"> Website Suggestion
-            </label>
-        </fieldset>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <label for="newsletter">
-            <input type="checkbox" id="newsletter" name="newsletter"> please subscribe me to the monthly newsletter
-        </label>
-
-        <button type="submit" class="btn-primary">Send Message</button>
-       </form>
-    </section>
      <section id="team" class="team">
-         <h2>Meet our Team</h2>
+         <h2>We Are Here to Serve You</h2>
          <div class="team-photos">
             <figure>
              <img src="images/loria.jpg" alt="a photo of loria a manager">

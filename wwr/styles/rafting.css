@@ -139,4 +139,166 @@ footer{ display:flex; justify-content:space-between; align-items:center; padding
   .team-photos{ width:100%; flex-direction:row; justify-content:center }
   .contact-grid{ grid-template-columns:1fr }
 }
+.hero {
+  position: relative;
+  margin-bottom: 3rem;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.hero__content {
+  position: absolute;
+  bottom: 20%; /* place le bloc plus bas sur l'image */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  max-width: 700px;
+  pointer-events: none; /* évite que le bloc masque le bouton */
+}
+.hero__content h1,
+.hero__content p {
+  pointer-events: auto; /* permet d’interagir avec ces éléments */
+  margin: 0 0 1rem 0;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+.hero__content h1 {
+  font-size: 3rem;
+}
+.hero__content p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* Bouton séparé et cliquable */
+.hero__content .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #e63946;
+  color: #fff;
+  pointer-events: auto; /* assure que le bouton est cliquable */
+}
+.hero__content .btn:hover {
+  background-color: #b91d2a;
+}
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.btn--primary {
+  background-color: #e63946;
+  color: #fff;
+}
+.btn--primary:hover {
+  background-color: #b91d2a;
+}
+
+/* --- Grid Layout --- */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+.grid--3 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* --- Trip Cards --- */
+.trip-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.trip-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+.trip-card h3 {
+  margin-bottom: 0.5rem;
+  color: #e63946;
+}
+.trip-card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* --- Trips Table --- */
+.trips-table {
+  margin-top: 4rem;
+}
+.trips-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.trips-table th,
+.trips-table td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: center;
+}
+.trips-table th {
+  background-color: #e63946;
+  color: #fff;
+}
+.trips-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* --- Newsletter --- */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+.newsletter-form input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn--primary {
+  background-color: #0077cc;
+  color: #fff;
+}
+.btn--secondary {
+  background-color: #e63946;
+  color: #fff;
+}
+
+/* --- Grid Layout --- */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+.grid--2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.grid-item img {
+  width: 400px;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
 

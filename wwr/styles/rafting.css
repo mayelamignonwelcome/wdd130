@@ -182,7 +182,7 @@ footer{ display:flex; justify-content:space-between; align-items:center; padding
   font-weight: bold;
   background-color: #e63946;
   color: #fff;
-  pointer-events: auto; /* assure que le bouton est cliquable */
+  pointer-events: initial; /* assure que le bouton est cliquable */
 }
 .hero__content .btn:hover {
   background-color: #b91d2a;

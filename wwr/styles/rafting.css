@@ -119,8 +119,7 @@ footer{ display:flex; justify-content:space-between; align-items:center; padding
 }
 
 /* Team */
-.team{ max-width:var(--max-width); margin:1.5rem auto; padding:0 1rem; text-align:left }
-.team{ border:1px solid #bbb; background:#fff; padding:1rem }
+.team{ max-width:var(--max-width); margin:1.5rem auto; padding:1rem; text-align:left; border:1px solid #bbb; background:#fff }
 .team h2{ margin:0 0 .75rem 0 }
 .team-photos{ display:flex; flex-direction:row; gap:2rem; justify-content:space-around; align-items:center; width:100% }
 .team-photos figure{ margin:0; width:160px; text-align:center }
